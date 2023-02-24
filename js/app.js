@@ -1,10 +1,17 @@
+import { hourCalculator, getSeconds, getHours } from "./lib/hourCalculator.js"
+
+const clock = document.querySelector('.clock')
 const counterClock = document.querySelector('.counter-clock')
 
-let setTime = 100
+const currentHour = getHours()
+const hourLimit = 18
+
+counterClock.style.height = `${hourCalculator(hourLimit)}%`
+clock.setAttribute('data-hour', currentHour)
+
 setInterval(() => {
-    if (setTime > 0) {
-        setTime -= 1
-        counterClock.style.height = `${setTime}%`
+    if (currentHour <= hourLimit) {
+        counterClock.style.height = `${hourCalculator(hourLimit)}%`
     }
     return
-}, 1000)
+}, getSeconds(60 * 10)) //60s = 1m * 10 = 10 minutos
