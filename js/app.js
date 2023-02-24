@@ -14,4 +14,4 @@ setInterval(() => {
         counterClock.style.height = `${hourCalculator(hourLimit)}%`
     }
     return
-}, getSeconds(60 * 10)) //60s = 1m * 10 = 10 minutos
+}, getSeconds(5))
