@@ -5,7 +5,7 @@ const timeToMilliseconds = (time) => {
   return ((hours * 60 + minutes) * 60 + seconds) * 1000;
 };
 
-const getPercentage = (currentHour, targetHour) => {
+const getPercentage = (currentHour, targetHour = "23:59:59") => {
   const hourInMilliseconds = timeToMilliseconds(currentHour);
   const targetHourInMilliseconds = timeToMilliseconds(targetHour);
   const percentage = Math.round(

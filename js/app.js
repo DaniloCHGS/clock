@@ -2,15 +2,14 @@ import { getPercentage, getSeconds } from "./lib/clock.js";
 
 const counterClock = document.querySelector(".counter-clock");
 
-const hourLimit = "23:59:59";
 // const hourLimit = "14:36:00";
 
-var percentage = getPercentage(new Date().toLocaleTimeString(), hourLimit);
+var percentage = getPercentage(new Date().toLocaleTimeString());
 
 counterClock.style.height = percentage;
 
 setInterval(() => {
-  percentage = getPercentage(new Date().toLocaleTimeString(), hourLimit);
+  percentage = getPercentage(new Date().toLocaleTimeString());
   counterClock.style.height = percentage;
 
   if (percentage === "100%") {
