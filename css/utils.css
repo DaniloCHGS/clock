@@ -1,15 +1,19 @@
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .flex.justify-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .flex.items-center {
-    align-items: center;
+  align-items: center;
+}
+
+.flex.column {
+  flex-direction: column;
 }
 
 .flex.column-reverse {
-    flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }

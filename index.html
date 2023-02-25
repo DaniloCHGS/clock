@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clock</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/utils.css">
-    <link rel="stylesheet" href="css/responsive.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
 
-<body>
-    <div id="app" class="flex justify-center items-center">
-        <div class="clock flex column-reverse" data-hour="">
-            <div class="counter-clock"></div>
-        </div>
+  <body>
+    <div id="app" class="flex column justify-center items-center">
+      <div class="display">
+        <h1></h1>
+        <h2></h2>
+      </div>
+      <div class="clock flex column-reverse" data-hour="">
+        <div class="counter-clock"></div>
+      </div>
     </div>
     <script src="./js/app.js" type="module"></script>
-</body>
-
+  </body>
 </html>
