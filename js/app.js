@@ -8,12 +8,13 @@ var percentage = getPercentage(new Date().toLocaleTimeString());
 
 counterClock.style.height = percentage;
 
-setInterval(() => {
+const clock = setInterval(() => {
   percentage = getPercentage(new Date().toLocaleTimeString());
   counterClock.style.height = percentage;
 
   if (percentage === "100%") {
     counterClock.classList.add("done");
+    clearInterval(clock);
     return;
   }
 }, getSeconds(1));
